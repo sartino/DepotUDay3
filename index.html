@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<link rel="stylesheet" href="styles.css">
+		
+	</head>
 		<script>
 			//JS Goes Here
 			document.addEventListener("DOMContentLoaded", go);
@@ -20,9 +21,11 @@
             var square = document.createElement('div');
 			var p = document.createElement("p");
             square.className = 'square';
+			square.addEventListener("click", getRandomColor);
 			square.id = document.getElementsByClassName('square').length;
 			square.addEventListener("mouseover", numberappear);
 			square.addEventListener("mouseout", numberdisappear);
+			square.addEventListener("click", getRandomColor);
             document.body.appendChild(p);
             document.body.appendChild(square);
         }
@@ -37,9 +40,14 @@
 			var square = e.target;
 			square.firstChild.remove();
 		}
+		
+		function getRandomColor(e) {
+    	e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
+    	}
+		
+		
 		</script>
-	</head>
+
 	<body>
 		<!-- DO NOT ADD HTML HERE -->
 	</body>
-</html>
