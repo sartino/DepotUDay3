@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<link rel="stylesheet" href="styles.css">
 		<script>
 			//JS Goes Here
+			document.addEventListener("DOMContentLoaded", go);
+			
+			function go() {
+    		var btn = document.createElement("BUTTON");
+    		var t = document.createTextNode("X");
+    		btn.appendChild(t);
+    		document.body.appendChild(btn);
+			}
+			
 		</script>
 	</head>
 	<body>
