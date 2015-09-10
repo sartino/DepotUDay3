@@ -20,10 +20,23 @@
             var square = document.createElement('div');
 			var p = document.createElement("p");
             square.className = 'square';
-			document.body.appendChild(p);
+			square.id = document.getElementsByClassName('square').length;
+			square.addEventListener("mouseover", numberappear);
+			square.addEventListener("mouseout", numberdisappear);
+            document.body.appendChild(p);
             document.body.appendChild(square);
         }
-			
+        
+        function numberappear(e){
+		var square = e.target;
+		var t = document.createTextNode(square.id);
+		square.appendChild(t);
+		}
+
+		function numberdisappear(e) {
+			var square = e.target;
+			square.firstChild.remove();
+		}
 		</script>
 	</head>
 	<body>
