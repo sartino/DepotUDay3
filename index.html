@@ -23,20 +23,21 @@
             square.className = 'square';
 			square.addEventListener("click", getRandomColor);
 			square.id = document.getElementsByClassName('square').length;
-			square.addEventListener("mouseover", numberappear);
-			square.addEventListener("mouseout", numberdisappear);
+			square.addEventListener("mouseover", numberAppear);
+			square.addEventListener("mouseout", numberDisappear);
 			square.addEventListener("click", getRandomColor);
+			square.addEventListener("dblclick", removeElement);
             document.body.appendChild(p);
             document.body.appendChild(square);
         }
         
-        function numberappear(e){
+        function numberAppear(e){
 			var square = e.target;
 			var t = document.createTextNode(square.id);
 			square.appendChild(t);
 		}
 
-		function numberdisappear(e) {
+		function numberDisappear(e) {
 			var square = e.target;
 			square.firstChild.remove();
 		}
@@ -44,6 +45,15 @@
 		function getRandomColor(e) {
     		e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
     	}
+		
+		function removeElement() {
+			var square = document.getElementsByClassName('square');
+			if (square) even = removeElement.nextSibling;
+			else { 
+				e.target.removeElement.previousSibling;
+			}
+			 
+		}
 		
 		
 		</script>
