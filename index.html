@@ -10,10 +10,10 @@
 			document.addEventListener("DOMContentLoaded", go);
         
         function go() {
-            var btn = document.createElement("BUTTON");
+           var btn = document.createElement("BUTTON");
            var t = document.createTextNode("CLICK");
-              btn.appendChild(t);
-            btn.addEventListener("click", createColoredDiv);
+           btn.appendChild(t);
+           btn.addEventListener("click", createColoredDiv);
            document.body.appendChild(btn);
         }
         
@@ -31,9 +31,9 @@
         }
         
         function numberappear(e){
-		var square = e.target;
-		var t = document.createTextNode(square.id);
-		square.appendChild(t);
+			var square = e.target;
+			var t = document.createTextNode(square.id);
+			square.appendChild(t);
 		}
 
 		function numberdisappear(e) {
@@ -42,7 +42,7 @@
 		}
 		
 		function getRandomColor(e) {
-    	e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
+    		e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
     	}
 		
 		
