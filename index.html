@@ -29,32 +29,33 @@
 			square.addEventListener("dblclick", removeElement);
             document.body.appendChild(p);
             document.body.appendChild(square);
-        }
+        	}
         
         function numberAppear(e){
 			var square = e.target;
 			var t = document.createTextNode(square.id);
 			square.appendChild(t);
-		}
+			}
 
 		function numberDisappear(e) {
 			var square = e.target;
 			square.firstChild.remove();
-		}
+			}
 		
 		function getRandomColor(e) {
     		e.target.style.backgroundColor = Math.floor(Math.random()*16777216).toString(16);
-    	}
+    		}
 		
-		function removeElement() {
-			var square = document.getElementsByClassName('square');
-			if (square) even = removeElement.nextSibling;
-			else { 
-				e.target.removeElement.previousSibling;
-			}
-			 
+		function removeElement(e) {
+			
 		}
-		
+			//if(e.target.id) = (even)return isEven(n) && (n % 2 == 0);
+				//else = return isOdd(n) && (Math.abs(n) % 2 == 1);
+			//var square = document.getElementsByClassName('square');
+			//if (square) even = removeElement.nextSibling;
+			//else { 
+			//	e.target.removeElement.previousSibling;
+			//}
 		
 		</script>
 
